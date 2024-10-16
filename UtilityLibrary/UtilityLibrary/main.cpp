@@ -1,6 +1,8 @@
 #include "Prerequisites.h"
 #include "Vector_2.h"
 #include "Vector_3.h"
+#include "Vector_4.h"
+
 using namespace std;
 
 
@@ -65,6 +67,36 @@ void Vector_3() {
 
 }
 
+void Vector_4() {
+    cout << "PRUEBA VECTOR 4 " << endl;
+
+    Vector4 v1(1.0f, 2.0f, 3.0f, 4.0f);                 // Creación de vector 4D con valores iniciales 
+    Vector4 v2;                                         // Creación de vector vacío.
+
+    Vector4 v3 = v1 + Vector4(1.0f, 1.0f, 1.0f, 1.0f);  // Suma de vectores.
+    Vector4 v4 = v1 - Vector4(0.5f, 0.5f, 0.5f, 0.5f);  // Resta de vectores.
+    Vector4 v5 = v1 * 2.0f;                             // Multiplicación por un escalar.
+
+    float magnitud = v1.magnitude();  // Magnitud del vector.
+
+    
+    Vector4 v6 = v1.normalize();      // Normalizar vector 
+
+    
+    const float* datos = v1.data();   // Obtener los datos del vector con puntero.
+
+    // Imprimir resultados
+
+    std::cout << "v3: "; v3.print();
+    std::cout << "v4: "; v4.print();
+    std::cout << "v5: "; v5.print();
+    std::cout << "Magnitud de v1: " << magnitud << std::endl;
+    std::cout << "v6 (normalizado): "; v6.print();
+    std::cout << "Datos de v1: (" << datos[0] << ", " << datos[1] << ", " << datos[2] << ", " << datos[3] << ")" << std::endl;
+}
+
+    // Ejecución del programa con menú de testeo por reto.
+
     int main() {
 
         int option;
@@ -73,9 +105,10 @@ void Vector_3() {
 
             // Ejecutar las prueba de clase vector deseada.
             cout << "\nIngrese el numero de clase vector a probar.\n"
-                << "1 . Reto vector 2.\n"
-                << "2 . Reto vector 3.\n" 
-                << "3 . Salir del programa.\n" << endl;
+                << "1 = Test de reto: clase vector 2.\n"
+                << "2 = Test de reto: clase vector 3.\n" 
+                << "3 = Test de reto: clase vector 4.\n"
+                << "\n4 = Salir del programa.\n" << endl;
 
             cin >> option;
 
@@ -89,12 +122,18 @@ void Vector_3() {
 
             case 2:
                 cout << "---------- Reto Vector 3 : ----------" << endl;
-                Vector_2();
+                Vector_3();
                 cout << "---------- Reto Vector 3 : ----------" << endl;
                 break;
 
+            case 3:
+                cout << "---------- Reto Vector 4 : ----------" << endl;
+                Vector_4();
+                cout << "---------- Reto Vector 4 : ----------" << endl;
+                break;
+
             default: 
-                cout << "----- Por favor ingresa un valor entre 1 y 3 : -----" << endl;
+                cout << "----- Por favor ingresa un valor entre 1 y 4 : -----" << endl;
             }
-        } while (option != 0);
+        } while (option != 4);
     }
