@@ -129,6 +129,7 @@
   <ItemGroup>
     <ClInclude Include="Prerequisites.h" />
     <ClInclude Include="Vector_2.h" />
+    <ClInclude Include="Vector_3.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
