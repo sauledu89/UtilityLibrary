@@ -61,7 +61,7 @@ public:
        de la suma de los cuadrados de sus componentes.
      */
     float magnitude() const {
-        return std::sqrt(x * x + y * y + z * z + w * w);
+        return sqrt(x * x + y * y + z * z + w * w);
     }
 
     /* Normalizar vector.
@@ -83,6 +83,6 @@ public:
      // Imprimir las componentes del vector
 
     void print() const {
-        std::cout << "(" << x << ", " << y << ", " << z << ", " << w << ")" << std::endl;
+        cout << "(" << x << ", " << y << ", " << z << ", " << w << ")" <<endl;
     }
 };

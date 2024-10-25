@@ -1,5 +1,4 @@
-#ifndef VECTOR2_H
-#define VECTOR2_H
+#pragma once
 #include "Prerequisites.h"
 
 // Clase Vector2 
@@ -51,8 +50,6 @@ public:
 
     // Función para imprimir los valores del vector.
     void print() const {
-        std::cout << "Vector2(" << x << ", " << y << ")" << std::endl;
+        cout << "Vector2(" << x << ", " << y << ")" << endl;
     }
 };
-
-#endif - 

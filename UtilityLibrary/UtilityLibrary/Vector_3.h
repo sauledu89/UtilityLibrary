@@ -67,7 +67,7 @@
          */
 
         float magnitude() const {
-            return std::sqrt(x * x + y * y + z * z);
+            return sqrt(x * x + y * y + z * z);
         }
 
         /*
@@ -101,6 +101,6 @@
            Mostrar las componentes en el formato "(x, y, z)".
          */
         void print() const {
-            std::cout << "(" << x << ", " << y << ", " << z << ")" << std::endl;
+            cout << "(" << x << ", " << y << ", " << z << ")" << endl;
         }
 };
